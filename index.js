@@ -15,10 +15,8 @@ app.use((req, res, next) => {
 
 // Serve content of the "public" and "css" subfolders directly
 app.use(express.static("public"));
+app.use(express.static("views"));
 app.use(express.static("css"));
-
-// Middleware to parse incoming request bodies
-app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // Return the index.html for requests to the root URL ("/")
@@ -28,7 +26,7 @@ app.get("/", (request, response) => {
   });
 
 // Route to display the form (GET request)
-app.get('/myForm', (req, res) => {
+app.get('/form', (req, res) => {
   res.sendFile(__dirname + '/ex1.html');
 });
 
@@ -43,9 +41,7 @@ app.post('/submit', (req, res) => {
   `);
 });
 
-/////////////////////////////////////////////////////////////////////////////
-//          RESOURCES        RESOURCES       RESOURCES         RESOURCES     
-/////////////////////////////////////////////////////////////////////////////      
+     
 
 // Return a web page for requests to "/ex1"
 app.get("/ex1", (request, response) => {
@@ -62,11 +58,6 @@ app.get("/ex3", (request, response) => {
   response.sendFile(`${__dirname}/views/ex3.html`);
   });
 
-
-
-/////////////////////////////////////////////////////////////////////////////
-//          END RESOURCES        END RESOURCES       END RESOURCES              
-///////////////////////////////////////////////////////////////////////////// 
 
 
 // Start listening to incoming requests
