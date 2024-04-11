@@ -1,29 +1,24 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+// document.addEventListener("DOMContentLoaded", function() {
+//   const form = document.getElementById('myForm');
 
-const app = express();
-const port = 3000;
-
-// Middleware to parse incoming request bodies
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// Route to display the form (GET request)
-app.get('/form', (req, res) => {
-  res.sendFile(__dirname + '/ex4.html');
-});
-
-// Route to process the form submission (POST request)
-app.post('/submit', (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  res.send(`
-    <h2>Confirmation Message:</h2>
-    <p>Name: ${name}</p>
-    <p>Email: ${email}</p>
-  `);
-});
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is listening at http://localhost:${port}`);
-});
+//   form.addEventListener('submit', function(event) {
+//     event.preventDefault(); // Prevent the default form submission behavior
+    
+//     // Get form data
+//     const formData = new FormData(form);
+//     const name = formData.get('name');
+//     const email = formData.get('email');
+    
+//     // Send form data to server
+//     fetch('/submit', {
+//       method: 'POST',
+//       body: formData
+//     })
+//     .then(response => response.text())
+//     .then(data => {
+//       // Display confirmation message from server
+//       document.getElementById('confirmation').innerHTML = data;
+//     })
+//     .catch(error => console.error('Error:', error));
+//   });
+// });
