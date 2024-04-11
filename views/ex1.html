@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EX4</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <a href="../index.html">Return to Index Page</a>
+
+  <h1>MyForm:</h1>
+  <p>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="paymentType">Payment Type:</label>
+    <div class="radio-container">
+      <input type="radio" id="cash" name="paymentType" value="cash">
+      <label for="cash">Cash</label><br>
+      <input type="radio" id="creditCard" name="paymentType" value="creditCard">
+      <label for="creditCard">Credit Card</label><br>
+      <input type="radio" id="googlePay" name="paymentType" value="googlePay">
+      <label for="googlePay">Google Pay</label><br>
+      <input type="radio" id="applePay" name="paymentType" value="applePay">
+      <label for="applePay">Apple Pay</label>
+    </div><br>
+
+    <div>
+      <input type="checkbox" id="promoCheck" name="promoCheck">
+      <label for="promoCheck">Sign me up for special promotions:</label>
+    </div><br>
+
+    <label for="location">Preferred Location:</label>
+    <select id="location" name="location">
+      <option value="losAngeles">Los Angeles</option>
+      <option value="orangeCounty">Orange County</option>
+      <option value="riverside">Riverside</option>
+      <option value="sanDiego">San Diego</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+  </p>
+
+  <!-- <p>
+  <table id="formDataTable">
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  </p> -->
+
+
+</body>
+<script src="../public/ex1.js"></script>
+
+</html>
